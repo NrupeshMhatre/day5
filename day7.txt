@@ -1,0 +1,19 @@
+$ cat array.sh
+array=(311 245 547 555 404 221 656 951 999 101)
+max=${array[0]}
+min=${array[0]}
+
+for i in "${array[@]}"
+do
+
+    if [[ "$i" -gt "$max" ]]; then
+        max="$i"
+    fi
+
+
+    if [[ "$i" -lt "$min" ]]; then
+        min="$i"
+    fi
+done
+echo "Max is: $max"
+echo "Min is: $min"
