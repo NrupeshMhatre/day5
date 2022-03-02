@@ -1,0 +1,57 @@
+$ cat adddice.sh
+#!/bin/bash -x
+A=$((RANDOM%6+1));
+B=$((RANDOM%6+1));
+ADD=$(( $A + $B ));
+echo $ADD
+
+$ cat dicenum.sh
+#!/bin/bash -x
+random=$((RANDOM%6+1));
+echo $random
+
+$ cat randomsingle.sh
+#!/bin/bash -x
+randomCheck=$((RANDOM%10));
+echo $randomCheck
+
+$ cat randomtwo.sh
+#!/bin/bash -x
+A=$((RANDOM%100));
+B=$((RANDOM%100));
+C=$((RANDOM%100));
+D=$((RANDOM%100));
+E=$((RANDOM%100));
+SUM=$(( $A + $B + $C + $D + $E ));
+echo $SUM
+AVG=$(( $SUM/5 ));
+echo $AVG
+
+
+5a
+#!/bin/bash -x
+Ft=12;
+Ft1=42;
+convert=$(( $Ft1/$Ft ));
+echo $convert
+
+b
+#!/bin/bash -x
+l=60;
+b=40;
+A=$(( $l * $b ));
+echo $A
+inMeter=$(( $A/3 ));
+echo $inMeter
+
+$ cat unitconvC.sh
+#!/bin/bash -x
+ echo "Enter the Width: "
+ read w
+ echo "Enter the heigh: "
+ read h
+ p=$(( $w * $h ))
+ p1=$(( $p * 12 ))
+ echo "One complte plot in Inch :" $p1
+ p25=$(( $p1 *25))
+ echo "Total plot 25 are:" $p25
